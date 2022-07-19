@@ -1,0 +1,12 @@
+
+  
+  body {background-color: rgb(241, 244, 247);}
+
+  #myName{
+    color: rgb(0, 81, 255);
+  }
+
+  #position {
+    display: block;
+    width: 20%;
+  }
