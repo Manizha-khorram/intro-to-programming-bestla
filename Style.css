@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
   
   body {background-color: rgb(244, 229, 244);}
@@ -10,3 +11,287 @@
     display: block;
     width: 20%;
   }
+=======
+#containerAll{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: auto; 
+  grid-gap: 10px;
+  grid-template-areas: 
+    "header header"
+    "main main" 
+    "footer footer";
+
+
+}
+#myName {
+  margin: 50px 400px 40px 70px;
+  font-size: 80px;
+  font-family: Gabriola;
+  color: #39185a;
+  position: absolute;
+}
+
+header {
+  background-image: url("f.jpg");
+  display: block;
+  position: sticky;
+  grid-area: header;
+  
+}
+main{
+  display: grid;
+  grid-area: main;
+}
+
+#myPrInfo {
+  margin: 10px 90px;
+  font-size: 25px;
+  font-family: Gabriola;
+  display: block;
+}
+
+#div4nav {
+  padding: 10px;
+}
+
+#myImage {
+  width: 30%;
+  margin: 40px 10px 0px 780px;
+  display: inline-block;
+  position: relative;
+
+}
+
+nav {
+  display: inline;
+  list-style-type: none;
+  margin: 60px 10px 20px 780px;
+}
+
+nav a {
+  display: relative;
+  color: #152850;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: Gabriola;
+  color: #39185a;
+  font-size: x-large;
+
+}
+
+body {
+  background-color: #f9fafc;
+  margin:0;
+  
+}
+.myInfo {
+  border: 3px dotted #9faec4;
+  border-radius: 10px;
+  padding: 5px 10px 5px;
+  background-color: #ebf2f3;
+  margin: 20px 100px;
+  font-family: Gabriola;
+  font-size: 20px;
+
+}
+#container{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+
+#container p {
+  font-family: Gabriola;
+  font-size: 20px;
+  height: 40px;
+  background-color: #f1f5fa;
+  
+  
+}
+
+li {
+  font-family: Gabriola;
+  font-size: 20px;
+}
+
+h2 {
+  text-decoration: none;
+  font-family: Gabriola;
+  font-size: 30px;
+}
+
+#messageForm{
+ display: grid;
+ width:80%;
+  height: 80vh;
+  margin: 50px 100px;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: Gabriola;
+  color: #39185a;
+  font-size: 20px;
+  position:relative;
+  background-color: #ebf2f3;
+  grid-template-areas:
+  'h2m . userMessages '
+  'form . .'
+  
+   
+   
+}
+#leave-message-form h2{
+  grid-area: h2m;
+}
+form{
+  display: grid;
+  grid-template-areas: 
+  'nameLabel emailLabel'  
+  'name email'
+  'messageLabel .'
+  'message message'
+  'submitLabel .'
+  'submit .'
+  ;
+  grid-gap: 10px;
+  width: 40px;
+  grid-area: form;
+
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  /*width: 80vw;
+  padding: 8px 20px;*/
+  border: 1px solid #245b86;
+  border-radius: 4px;
+  box-sizing: border-box;
+ 
+}
+
+input[type=text]{
+  grid-area: name;
+  width: auto;
+  height: 25px;
+}
+input[type=email]{
+  grid-area: email;
+  width: auto;
+  height: 25px;
+}
+textarea {
+  grid-area: message;
+  width: 100%;
+  height: 50px;
+}
+#submit{
+  grid-area: submit;
+  margin-top: auto;
+}
+#name{
+  grid-area: nameLabel;
+}
+#email{
+  grid-area: emailLabel;
+}
+#message{
+  grid-area: messageLabel;
+}
+#lsubmit{
+  grid-area: submitLabel;
+}
+#messages{
+  grid-area: userMessages;
+}
+
+  Button[type=submit] {
+  border-radius: 4px;
+  border: none;
+  background-color: #acb9c3;
+  padding: 10px;
+  margin: 2px;
+}
+
+Button[type=remove] {
+  color: #acb9c3;
+  border-radius: 4px;
+  margin: 0px 4px;
+  padding: 10px;
+
+} 
+
+footer {
+  background-image: url("f.jpg");
+  margin-top:200px ;
+  padding: 20px;
+  position:sticky;
+  grid-area: footer;
+}
+
+/* I am still working in this */
+
+/* Smartphones */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+  .containerAll{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows:auto; 
+    grid-gap: 10px;
+  }
+  nav{
+    display: block;
+  }
+  #myName {
+    font-size: 10px;
+    font-family: Gabriola;
+    color: #39185a;
+    
+  }
+  #myImage {
+    width: 20vw;
+    margin:auto;
+    display: block;
+    
+  }
+  
+
+}
+/* iPads */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  
+  nav{
+    display: block;
+  };
+  #myName {
+    margin: 50px 400px 40px 70px;
+    font-size: 20px;
+    font-family: Gabriola;
+    color: #39185a;
+    display: block;
+    position:static;
+  }
+  #myImage {
+    width: 20vw;
+    margin:auto;
+    display: block;
+    position:static;
+  }
+  
+ .containerAll{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows:auto; 
+  grid-gap: 10px;
+}}
+
+/* Desktops and Laptops */
+@media only screen and (min-width : 1224px) {}
+
+/* Large Screens */
+@media only screen and (min-width : 1824px) {}
+>>>>>>> Stashed changes
