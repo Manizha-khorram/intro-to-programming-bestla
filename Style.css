@@ -1,12 +1,156 @@
+#myName {
+  margin: 50px 400px 40px 70px;
+  font-size: 80px;
+  font-family: Gabriola;
+  color: #39185a;
+  position: absolute;
+}
 
-  
-  body {background-color: rgb(244, 229, 244);}
+#myPrInfo {
+  margin: 10px 90px;
+  font-size: 25px;
+  font-family: Gabriola;
+  display: block;
+}
 
-  #myName{
-    color: rgb(51, 101, 210);
+header {
+  background-image: url("f.jpg");
+  display: block;
+  position: relative;
+}
+
+#div4nav {
+  padding: 10px;
+}
+
+#myImage {
+  width: 30%;
+  margin: 40px 10px 0px 750px;
+  display: inline-block;
+  position: relative;
+
+}
+
+nav {
+  display: inline;
+  list-style-type: none;
+  margin: 60px 10px 20px 800px;
+}
+
+nav a {
+  display: relative;
+  color: #152850;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: Gabriola;
+  color: #39185a;
+  font-size: x-large;
+
+}
+
+body {
+  background-color: #faeee7;
+}
+
+/*header::before{
+    content: '';
+    backgr}ound-image:url('5.jpg');
+    background-size:cover;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
+    height:90%;
+    width: 100%;
+}
+*/
+.myInfo {
+  border: 3px dotted #9faec4;
+  border-radius: 10px;
+  padding: 5px 10px 5px;
+  background-color: #faeee7;
+  margin: 20px 100px;
+}
+
+.myInfo p , li {
+  font-family: Gabriola;
+  font-size: 20px;
+}
+
+h2 a{
+  text-decoration: none;
+  font-family: Gabriola;
+  font-size: 30px;
+}
+
+#messageForm {
+  width: 30%;
+  margin: 50px 380px;
+  border-radius: 5px;
+  border: 3px dotted #9faec4;
+  padding: 20px;
+  font-family: Gabriola;
+  color: #39185a;
+  font-size: 20px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 8px 20px;
+  display: inline-block;
+  border: 1px solid #acb9c3;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#messages {
+  display: inline-block;
+}
+
+Button[type=submit] {
+  border-radius: 4px;
+  border: none;
+  background-color: #acb9c3;
+  padding: 10px;
+  margin: 2px;
+}
+
+Button[type=remove] {
+  color: #acb9c3;
+  border-radius: 4px;
+  margin: 0px 4px;
+  padding: 10px;
+
+}
+
+footer {
+  background-image: url("f.jpg");
+  padding: 20px;
+}
+
+/* Although it was not part of assignment.I couldnt understand how to select the element which was created by js please giud me!
+  form li:nth-of-child(2){
+    color: #acb9c3;
+    border-radius: 4px;
+    margin:0px 4px;
+    padding: 10px;
+    
   }
+  */
 
-  #position {
-    display: block;
-    width: 20%;
-  }
+/* Smartphones */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {}
+
+/* iPads */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+
+/* Desktops and Laptops */
+@media only screen and (min-width : 1224px) {}
+
+/* Large Screens */
+@media only screen and (min-width : 1824px) {}
