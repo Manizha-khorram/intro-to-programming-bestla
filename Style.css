@@ -1,20 +1,8 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
   
-  body {background-color: rgb(244, 229, 244);}
+body {background-color: rgb(244, 229, 244);}
 
-  #myName{
-    color: rgb(51, 101, 210);
-  }
 
-  #position {
-    display: block;
-    width: 20%;
-  }
-=======
-=======
->>>>>>> Stashed changes
 #containerAll{
   height: 100vh;
   display: grid;
@@ -26,44 +14,34 @@
     "main main" 
     "footer footer";
 
-
 }
+ header {
+      background-image: url("f.jpg");
+      display: grid;
+      position: sticky;
+      grid-area: header;
+      grid-template-areas: 
+      '. nav'
+      'myName myName'
+      '. myImage'
+      ;
+      
+    }
+
 #myName {
   margin: 50px 400px 40px 70px;
   font-size: 80px;
   font-family: Gabriola;
   color: #39185a;
   position: absolute;
+  grid-area: myName;
 }
-
-header {
-  background-image: url("f.jpg");
-  display: block;
-  position: sticky;
-  grid-area: header;
-  
-}
-main{
-  display: grid;
-  grid-area: main;
-}
-
-#myPrInfo {
-  margin: 10px 90px;
-  font-size: 25px;
-  font-family: Gabriola;
-  display: block;
-}
-
-#div4nav {
-  padding: 10px;
-}
-
 #myImage {
   width: 30%;
-  margin: 40px 10px 0px 780px;
+  margin: 40px 10px 0px 740px;
   display: inline-block;
   position: relative;
+  grid-area: myImage;
 
 }
 
@@ -71,6 +49,7 @@ nav {
   display: inline;
   list-style-type: none;
   margin: 60px 10px 20px 780px;
+  grid-area: nav;
 }
 
 nav a {
@@ -82,20 +61,47 @@ nav a {
   font-family: Gabriola;
   color: #39185a;
   font-size: x-large;
-
 }
-
 body {
   background-color: #f9fafc;
   margin:0;
+}
+main{
+  display: grid;
+  grid-area: main;
+  grid-gap:10px;
+  grid-template-columns:1fr 1fr 1fr ;
+  grid-template-areas:
+  'about skills connect'
+  'experience experience experience'
+  'messageForm messageForm messageForm'
   
+  ;
+}
+
+#About{
+ grid-area: about;
+ margin: 60px 3px 40px 153px;
+}
+#skills{
+ grid-area: skills;
+ margin:60px 65px 40px 72px;
+}
+#Connect{
+grid-area: connect;
+margin: 60px 120px 40px 25px;
+}
+#Experience{
+grid-area: experience;
+border: 3px hidden #ebf2f3;
+margin: 40px 120px 40px 114px;
+width: 83%;
 }
 .myInfo {
-  border: 3px dotted #9faec4;
+  border: 3px inset #ebf2f3;
   border-radius: 10px;
-  padding: 5px 10px 5px;
+  padding: 5px 5px 8px;
   background-color: #ebf2f3;
-  margin: 20px 100px;
   font-family: Gabriola;
   font-size: 20px;
 
@@ -110,8 +116,6 @@ body {
   font-size: 20px;
   height: 40px;
   background-color: #f1f5fa;
-  
-  
 }
 
 li {
@@ -127,9 +131,11 @@ h2 {
 
 #messageForm{
  display: grid;
+ grid-area: messageForm;
  width:80%;
+ border: 3px hidden #ebf2f3;
   height: 80vh;
-  margin: 50px 100px;
+  margin: 40px 118px;
   border-radius: 5px;
   padding: 20px;
   font-family: Gabriola;
@@ -140,8 +146,6 @@ h2 {
   grid-template-areas:
   'h2m . userMessages '
   'form . .'
-  
-   
    
 }
 #leave-message-form h2{
@@ -237,64 +241,97 @@ footer {
 
 /* Smartphones */
 @media only screen and (min-width : 320px) and (max-width : 480px) {
-
-  .containerAll{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows:auto; 
-    grid-gap: 10px;
-  }
-  nav{
-    display: block;
-  }
-  #myName {
-    font-size: 10px;
-    font-family: Gabriola;
-    color: #39185a;
-    
-  }
-  #myImage {
-    width: 20vw;
-    margin:auto;
-    display: block;
-    
-  }
   
-
 }
 /* iPads */
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
-  
-  nav{
-    display: block;
-  };
-  #myName {
-    margin: 50px 400px 40px 70px;
-    font-size: 20px;
-    font-family: Gabriola;
-    color: #39185a;
-    display: block;
-    position:static;
+  header {
+    background-image: url("f.jpg");
+    display: grid;
+    position: relative;
+    grid-template-rows: 30px 30px 30px;
+    grid-area: header;
+    grid-template-areas: 
+    '... nav'
+    '... myName'
+    ;
+    
   }
-  #myImage {
-    width: 20vw;
-    margin:auto;
-    display: block;
-    position:static;
-  }
-  
- .containerAll{
-  height: 100vh;
+
+#myName {
+margin: 95px -36px 37px 35px;
+font-size: 50px;
+font-family: Gabriola;
+color: #39185a;
+display: flex;
+position: static;
+grid-area: myName;
+}
+
+nav {
+display: flex;
+list-style-type: none;
+margin: 60px 10px 20px 30px;
+grid-area: nav;
+}
+
+main{
   display: grid;
-  grid-template-columns: 1fr ;
-  grid-template-rows:auto; 
-  grid-gap: 10px;
-}}
+  grid-area: main;
+  grid-gap:10px;
+  grid-template-columns:1fr 1fr 1fr ;
+  grid-template-areas:
+  'about about about'
+  'skills skills skills'
+  'connect connect connect'
+  'experience experience experience'
+  'messageForm messageForm messageForm'
+  
+  ;
+}
+
+#About{
+ grid-area: about;
+ margin: 60px 23px 40px 45px;
+}
+#skills{
+ grid-area: skills;
+ margin:40px 23px 40px 45px;
+}
+#Connect{
+grid-area: connect;
+margin: 40px 23px 40px 45px;
+}
+#Experience{
+grid-area: experience;
+border: 3px inset #ebf2f3;
+margin: 40px 23px 40px 44px;
+width: 90%;
+
+}
+#container{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+
+#container p {
+  font-family: Gabriola;
+  font-size: 20px;
+  height: 40px;
+  background-color: #f1f5fa;
+}
+#messageForm{
+  width:85%;
+ border: 3px inset #ebf2f3;
+  height: 80vh;
+  margin: 50px 39px;
+  border-radius: 5px;
+}
+
+}
 
 /* Desktops and Laptops */
 @media only screen and (min-width : 1224px) {}
 
 /* Large Screens */
 @media only screen and (min-width : 1824px) {}
->>>>>>> Stashed changes
