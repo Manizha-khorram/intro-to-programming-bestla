@@ -50,16 +50,16 @@ messageForm.item(0).addEventListener("submit",(event) => {
             input.value=span.innerText;
             newMessage.insertBefore(input,span);
             newMessage.removeChild(span);
-            button.innerText='save';
+            button.innerText ='save';
 
-        }else if(button.innerText==='save'){
-            const input= newMessage.childNodes[2];
-            const span=document.createElement('span');
+        }else if(button.innerText === 'save'){
+            const input = newMessage.childNodes[2];
+            const span = document.createElement('span');
             span.type='text';
-            span.innerText=input.value;
+            span.innerText = input.value;
             newMessage.insertBefore(span,input);
             newMessage.removeChild(input);
-            button.innerText='edit';
+            button.innerText = 'edit';
         }
 }})
       messageList.appendChild(newMessage);
@@ -67,3 +67,22 @@ messageForm.item(0).addEventListener("submit",(event) => {
       newMessage.appendChild(editButton);
       messageForm.item(0).reset();
 })
+
+var githubRequest = new XMLHttpRequest();
+
+githubRequest.open('GET', 'https://api.github.com/users/Manizha-khorram/repos');
+githubRequest.send();
+    githubRequest.onreadystatechange = function () {
+        if (githubRequest.readyState === 4) {
+            var repositories = JSON.parse(githubRequest.responseText);
+            console.log('i am repositories', repositories);
+        
+            let projectSection = document.getElementById('projects');
+            let projectList = projectSection.querySelector('ul');
+            for(let i = 0; i < repositories.length; i++){
+            let project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+   }        
+}}  
+      

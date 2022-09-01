@@ -1,40 +1,55 @@
+
+  
+body {background-color: rgb(244, 229, 244);}
+
+
+#containerAll{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: auto; 
+  grid-gap: 10px;
+  grid-template-areas: 
+    "header header"
+    "main main" 
+    "footer footer";
+
+}
+ header {
+      background-image: url("ff.jpg");
+      display: grid;
+      position: sticky;
+      grid-area: header;
+      grid-template-areas: 
+      '. nav'
+      'myName myName'
+      '. myImage'
+      ;
+      
+    }
+
 #myName {
   margin: 50px 400px 40px 70px;
   font-size: 80px;
   font-family: Gabriola;
   color: #39185a;
   position: absolute;
+  grid-area: myName;
 }
-
-#myPrInfo {
-  margin: 10px 90px;
-  font-size: 25px;
-  font-family: Gabriola;
-  display: block;
-}
-
-header {
-  background-image: url("f.jpg");
-  display: block;
-  position: relative;
-}
-
-#div4nav {
-  padding: 10px;
-}
-
 #myImage {
   width: 30%;
-  margin: 40px 10px 0px 750px;
+  margin: 40px 10px 0px 740px;
   display: inline-block;
   position: relative;
+  grid-area: myImage;
 
 }
 
 nav {
   display: inline;
   list-style-type: none;
-  margin: 60px 10px 20px 800px;
+  margin: 60px 10px 20px 780px;
+  grid-area: nav;
 }
 
 nav a {
@@ -46,73 +61,171 @@ nav a {
   font-family: Gabriola;
   color: #39185a;
   font-size: x-large;
-
 }
-
 body {
-  background-color: #faeee7;
+  background-color: #f9fafc;
+  margin:0;
+}
+main{
+  display: grid;
+  grid-area: main;
+  grid-gap:10px;
+  grid-template-columns:1fr 1fr 1fr ;
+  grid-template-areas:
+  'projects skills connect'
+  'about about about'
+  'experience experience experience'
+  'messageForm messageForm messageForm'
+  
+  ;
 }
 
-/*header::before{
-    content: '';
-    backgr}ound-image:url('5.jpg');
-    background-size:cover;
-    position: absolute;
-    top: 40px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.9;
-    height:90%;
-    width: 100%;
+#About{
+  grid-area: about;
+  border: 3px hidden #ebf2f3;
+  margin: 40px 120px 40px 114px;
+  width: 83%;
 }
-*/
+#skills{
+ grid-area: skills;
+ margin:60px 65px 40px 72px;
+}
+#Connect{
+grid-area: connect;
+margin: 60px 120px 40px 25px;
+}
+#Experience{
+grid-area: experience;
+border: 3px hidden #ebf2f3;
+margin: 40px 120px 40px 114px;
+width: 83%;
+}
+#projects{
+  grid-area: projects;
+  margin: 60px 3px 40px 153px;
+}
 .myInfo {
-  border: 3px dotted #9faec4;
+  border: 3px inset #ebf2f3;
   border-radius: 10px;
-  padding: 5px 10px 5px;
-  background-color: #faeee7;
-  margin: 20px 100px;
+  padding: 5px 5px 8px 12px;
+  background-color: #ebf2f3;
+  font-family: Gabriola;
+  font-size: 20px;
+
+}
+#container{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
 }
 
-.myInfo p , li {
+#container p {
+  font-family: Gabriola;
+  font-size: 20px;
+  height: 40px;
+  background-color: #f1f5fa;
+}
+
+li {
   font-family: Gabriola;
   font-size: 20px;
 }
 
-h2 a{
+h2 {
   text-decoration: none;
   font-family: Gabriola;
   font-size: 30px;
 }
 
-#messageForm {
-  width: 30%;
-  margin: 50px 380px;
+#messageForm{
+  display: grid;
+  grid-area: messageForm;
+  width:80%;
+  border: 3px hidden #ebf2f3;
+  height: 80vh;
+  margin: 40px 118px;
   border-radius: 5px;
-  border: 3px dotted #9faec4;
   padding: 20px;
   font-family: Gabriola;
   color: #39185a;
   font-size: 20px;
+  position:relative;
+  background-color: #ebf2f3;
+  grid-template-areas:
+  'h2m . userMessages '
+  'form . .'
+   
 }
-
+#leave-message-form h2{
+  grid-area: h2m;
+}
+.message-area{
+  margin: 20px 7px;
+  background-color: #fefefe;
+  width: 400px;
+  height: 300px;
+  grid-area: message-area;
+}
+form{
+  display: grid;
+  grid-template-areas: 
+  'nameLabel emailLabel'  
+  'name email'
+  'messageLabel .'
+  'message message'
+  'submitLabel .'
+  'submit .'
+  ;
+  grid-gap: 10px;
+  width: 40px;
+  grid-area: form;
+}
 input[type=text],
 input[type=email],
 textarea {
-  width: 100%;
-  padding: 8px 20px;
-  display: inline-block;
-  border: 1px solid #acb9c3;
+  /*width: 80vw;
+  padding: 8px 20px;*/
+  border: 1px solid #245b86;
   border-radius: 4px;
   box-sizing: border-box;
+ 
 }
 
-#messages {
-  display: inline-block;
+input[type=text]{
+  grid-area: name;
+  width: auto;
+  height: 25px;
+}
+input[type=email]{
+  grid-area: email;
+  width: auto;
+  height: 25px;
+}
+textarea {
+  grid-area: message;
+  width: 100%;
+  height: 50px;
+}
+#submit{
+  grid-area: submit;
+  margin-top: auto;
+}
+#name{
+  grid-area: nameLabel;
+}
+#email{
+  grid-area: emailLabel;
+}
+#message{
+  grid-area: messageLabel;
+}
+#lsubmit{
+  grid-area: submitLabel;
+}
+#messages{
+  grid-area: userMessages;
 }
 
-Button[type=submit] {
+  Button[type=submit] {
   border-radius: 4px;
   border: none;
   background-color: #acb9c3;
@@ -126,28 +239,184 @@ Button[type=remove] {
   margin: 0px 4px;
   padding: 10px;
 
-}
-
+} 
 footer {
   background-image: url("f.jpg");
+  margin-top:200px ;
   padding: 20px;
+  position:sticky;
+  grid-area: footer;
+}
+footer p{
+  text-align: center;
 }
 
-/* Although it was not part of assignment.I couldnt understand how to select the element which was created by js please giud me!
-  form li:nth-of-child(2){
-    color: #acb9c3;
-    border-radius: 4px;
-    margin:0px 4px;
-    padding: 10px;
-    
-  }
-  */
+/* I am still working in this */
 
 /* Smartphones */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {}
+@media only screen and (min-width : 520px) and (max-width : 768px) {
+  
+header{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+header #myName {
+  font-size: 50px;
+  margin: 74px 46px 37px 23px;
+}
+#myImage{
+  display:none;
+}
 
+nav {
+display: flex;
+list-style-type: none;
+margin: 30px 10px 20px 30px;
+grid-area: nav;
+}
+#projects{
+  grid-area: projects;
+  margin: 60px 3px 40px 37px;
+}
+ 
+.message-area{
+  margin: 20px 7px;
+  background-color: #fefefe;
+  width: 300px;
+  height: 200px;
+  grid-area: message-area;
+
+}
+}
 /* iPads */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  header {
+    background-image: url("f.jpg");
+    display: grid;
+    position:relative;
+    grid-template-rows: 100px 30px 30px;
+    grid-area: header;
+    grid-template-areas: 
+    '... nav'
+    '... myName'
+    ;
+    
+  }
+
+#myName {
+margin: -50px 46px 37px 23px;
+font-size: 50px;
+font-family: Gabriola;
+color: #39185a;
+display: flex;
+position: static;
+grid-area: myName;
+}
+#myImage{
+  display:none;
+}
+
+nav {
+display: flex;
+list-style-type: none;
+margin: 3px 10px 20px 30px;
+grid-area: nav;
+}
+
+main{
+  display: grid;
+  grid-area: main;
+  grid-gap:10px;
+  grid-template-columns:1fr ;
+  grid-template-areas:
+  'about .'
+  'skills .'
+  'connect .'
+  'experience .'
+  'projects .'
+  'messageForm .'
+  
+  ;
+}
+
+#About{
+ grid-area: about;
+ margin: 60px 23px 40px 45px;
+ width: 90%;
+}
+#skills{
+ grid-area: skills;
+ margin:40px 23px 40px 45px;
+ width: 90%;
+}
+#Connect{
+grid-area: connect;
+margin: 40px 23px 40px 45px;
+}
+#Experience{
+grid-area: experience;
+border: 3px inset #ebf2f3;
+margin: 40px 23px 40px 44px;
+width: 90%;
+
+}
+#projects{
+  grid-area: projects;
+  margin: 60px 3px 40px 37px;
+}
+ 
+#container{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  width: 90%;
+}
+
+#container p {
+  font-family: Gabriola;
+  font-size: 20px;
+  height: 40px;
+  background-color: #f1f5fa;
+}
+#messageForm{
+  width:85%;
+ border: 3px inset #ebf2f3;
+  height: 80vh;
+  margin: 50px 39px;
+  border-radius: 5px;
+}
+.message-area{
+  margin: 20px 7px;
+  background-color: #fefefe;
+  width: 300px;
+  height: 200px;
+  grid-area: message-area;
+
+}
+#messageForm{
+  display: grid;
+  grid-area: messageForm;
+  width:80%;
+  border: 3px hidden #ebf2f3;
+  height: 80vh;
+  margin: 40px 118px;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: Gabriola;
+  color: #39185a;
+  font-size: 20px;
+  position:relative;
+  background-color: #ebf2f3;
+  grid-template-areas:
+  'h2m . . userMessages '
+  'form . .'
+}
+messages{
+  grid-area: userMessages;
+  margin-right: 30px;
+}
+
+}
 
 /* Desktops and Laptops */
 @media only screen and (min-width : 1224px) {}
