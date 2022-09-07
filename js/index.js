@@ -50,16 +50,16 @@ messageForm.item(0).addEventListener("submit",(event) => {
             input.value=span.innerText;
             newMessage.insertBefore(input,span);
             newMessage.removeChild(span);
-            button.innerText='save';
+            button.innerText ='save';
 
-        }else if(button.innerText==='save'){
-            const input= newMessage.childNodes[2];
-            const span=document.createElement('span');
+        }else if(button.innerText === 'save'){
+            const input = newMessage.childNodes[2];
+            const span = document.createElement('span');
             span.type='text';
-            span.innerText=input.value;
+            span.innerText = input.value;
             newMessage.insertBefore(span,input);
             newMessage.removeChild(input);
-            button.innerText='edit';
+            button.innerText = 'edit';
         }
 }})
       messageList.appendChild(newMessage);
@@ -67,3 +67,22 @@ messageForm.item(0).addEventListener("submit",(event) => {
       newMessage.appendChild(editButton);
       messageForm.item(0).reset();
 })
+
+
+
+
+    
+fetch('https://api.github.com/users/Manizha-khorram/repos')
+ .then(response => response.json())
+ .then( data => {
+    
+     let projectSection = document.getElementById('projects');
+     let projectList = projectSection.querySelector('ul');
+     for(let i = 0; i < data.length; i++){
+         let project = document.createElement('li');
+         project.innerText = data[i].name;
+         projectList.appendChild(project);
+    
+             } }).catch(error => console.log('Looks like there is an error!!',error))
+ 
+ 
