@@ -31,16 +31,16 @@ body {background-color: rgb(244, 229, 244);}
     }
 
 #myName {
-  margin: 33px 400px 40px 361px;
+  margin: 85px 400px 40px 361px;
   font-size: 80px;
   font-family: Gabriola;
-  color: #39185a;
+  color: #004857;
   position: absolute;
   grid-area: myName;
 }
 #myImage {
-  width: 30%;
-  margin: -3px 10px 0px 821px;
+  width: 28%;
+  margin: 50px 10px 0px 878px;
   display: inline-block;
   position: relative;
   grid-area: myImage;
@@ -50,7 +50,7 @@ body {background-color: rgb(244, 229, 244);}
 nav {
   display: inline;
   list-style-type: none;
-  margin: 30px 10px 20px 882px;
+  margin: 14px 10px 20px 729px;
   grid-area: nav;
 }
 
@@ -61,7 +61,7 @@ nav a {
   text-decoration: none;
   background-color: transparent;
   font-family: Gabriola;
-  color: #39185a;
+  color: #004857;
   font-size: x-large;
 }
 body {
@@ -84,7 +84,6 @@ main{
 
 #About{
   grid-area: about;
-  border: 3px hidden #ebf2f3;
   margin: 40px 120px 40px 114px;
   width: 83%;
 }
@@ -98,7 +97,6 @@ margin: 61px 89px 40px 37px;
 }
 #Experience{
 grid-area: experience;
-border: 3px hidden #ebf2f3;
 margin: 40px 120px 40px 114px;
 width: 83%;
 }
@@ -107,13 +105,13 @@ width: 83%;
   margin: 60px 23px 37px 118px;
 }
 .myInfo {
-  border: 3px inset #ebf2f3;
+  border-bottom: 3px inset #b3d5da;
   border-radius: 10px;
   padding: 5px 5px 8px 12px;
   background-color: #ebf2f3;
   font-family: Gabriola;
   font-size: 20px;
-
+  
 }
 #container{
   display: grid;
@@ -136,13 +134,15 @@ h2 {
   text-decoration: none;
   font-family: Gabriola;
   font-size: 30px;
+  color: #004857;
+  padding-left: 5px;
 }
 
 #messageForm{
   display: grid;
   grid-area: messageForm;
   width:80%;
-  border: 3px hidden #ebf2f3;
+    border-bottom: 3px inset #b3d5da;
   height: 80vh;
   margin: 40px 118px;
   border-radius: 5px;
