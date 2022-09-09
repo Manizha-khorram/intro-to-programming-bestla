@@ -16,6 +16,7 @@ body {background-color: rgb(244, 229, 244);}
 
 }
  header {
+
       background-image: url("f.jpg");
       display: grid;
       position: sticky;
@@ -164,7 +165,6 @@ form{
   grid-gap: 10px;
   width: 40px;
   grid-area: form;
-
 }
 
 input[type=text],
@@ -240,6 +240,7 @@ footer {
 /* I am still working in this */
 
 /* Smartphones */
+
 @media only screen and (min-width : 320px) and (max-width : 480px) {
   
 }
@@ -279,6 +280,7 @@ main{
   display: grid;
   grid-area: main;
   grid-gap:10px;
+
   grid-template-columns:1fr 1fr 1fr ;
   grid-template-areas:
   'about about about'
@@ -309,6 +311,7 @@ margin: 40px 23px 40px 44px;
 width: 90%;
 
 }
+
 #container{
   display: grid;
   grid-template-columns: 6fr 1fr;
@@ -327,6 +330,7 @@ width: 90%;
   margin: 50px 39px;
   border-radius: 5px;
 }
+
 
 }
 
