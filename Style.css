@@ -16,8 +16,9 @@ body {background-color: rgb(244, 229, 244);}
 
 }
  header {
-
-      background-image: url("f.jpg");
+      background-image: url("abst.jpg");
+      background-repeat: no-repeat;
+      background-size:800px;
       display: grid;
       position: sticky;
       grid-area: header;
@@ -30,16 +31,16 @@ body {background-color: rgb(244, 229, 244);}
     }
 
 #myName {
-  margin: 50px 400px 40px 70px;
+  margin: 85px 400px 40px 361px;
   font-size: 80px;
   font-family: Gabriola;
-  color: #39185a;
+  color: #004857;
   position: absolute;
   grid-area: myName;
 }
 #myImage {
-  width: 30%;
-  margin: 40px 10px 0px 740px;
+  width: 28%;
+  margin: 50px 10px 0px 878px;
   display: inline-block;
   position: relative;
   grid-area: myImage;
@@ -49,7 +50,7 @@ body {background-color: rgb(244, 229, 244);}
 nav {
   display: inline;
   list-style-type: none;
-  margin: 60px 10px 20px 780px;
+  margin: 14px 10px 20px 729px;
   grid-area: nav;
 }
 
@@ -60,7 +61,7 @@ nav a {
   text-decoration: none;
   background-color: transparent;
   font-family: Gabriola;
-  color: #39185a;
+  color: #004857;
   font-size: x-large;
 }
 body {
@@ -73,7 +74,8 @@ main{
   grid-gap:10px;
   grid-template-columns:1fr 1fr 1fr ;
   grid-template-areas:
-  'about skills connect'
+  'projects skills connect'
+  'about about about'
   'experience experience experience'
   'messageForm messageForm messageForm'
   
@@ -81,31 +83,35 @@ main{
 }
 
 #About{
- grid-area: about;
- margin: 60px 3px 40px 153px;
+  grid-area: about;
+  margin: 40px 120px 40px 114px;
+  width: 83%;
 }
 #skills{
  grid-area: skills;
- margin:60px 65px 40px 72px;
+ margin:60px 52px 40px 67px;
 }
 #Connect{
 grid-area: connect;
-margin: 60px 120px 40px 25px;
+margin: 61px 89px 40px 37px;
 }
 #Experience{
 grid-area: experience;
-border: 3px hidden #ebf2f3;
 margin: 40px 120px 40px 114px;
 width: 83%;
 }
+#projects{
+  grid-area: projects;
+  margin: 60px 23px 37px 118px;
+}
 .myInfo {
-  border: 3px inset #ebf2f3;
+  border-bottom: 3px inset #b3d5da;
   border-radius: 10px;
-  padding: 5px 5px 8px;
+  padding: 5px 5px 8px 12px;
   background-color: #ebf2f3;
   font-family: Gabriola;
   font-size: 20px;
-
+  
 }
 #container{
   display: grid;
@@ -128,13 +134,15 @@ h2 {
   text-decoration: none;
   font-family: Gabriola;
   font-size: 30px;
+  color: #004857;
+  padding-left: 5px;
 }
 
 #messageForm{
- display: grid;
- grid-area: messageForm;
- width:80%;
- border: 3px hidden #ebf2f3;
+  display: grid;
+  grid-area: messageForm;
+  width:80%;
+    border-bottom: 3px inset #b3d5da;
   height: 80vh;
   margin: 40px 118px;
   border-radius: 5px;
@@ -152,6 +160,13 @@ h2 {
 #leave-message-form h2{
   grid-area: h2m;
 }
+.message-area{
+  margin: 20px 7px;
+  background-color: #fefefe;
+  width: 400px;
+  height: 300px;
+  grid-area: message-area;
+}
 form{
   display: grid;
   grid-template-areas: 
@@ -166,7 +181,6 @@ form{
   width: 40px;
   grid-area: form;
 }
-
 input[type=text],
 input[type=email],
 textarea {
@@ -228,29 +242,63 @@ Button[type=remove] {
   padding: 10px;
 
 } 
-
 footer {
-  background-image: url("f.jpg");
+  background-image: url("abst.jpg");
   margin-top:200px ;
   padding: 20px;
   position:sticky;
   grid-area: footer;
 }
+footer p{
+  text-align: center;
+}
 
 /* I am still working in this */
 
 /* Smartphones */
-
-@media only screen and (min-width : 320px) and (max-width : 480px) {
+@media only screen and (min-width : 520px) and (max-width : 768px) {
   
+header{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+header #myName {
+  font-size: 50px;
+  margin: 74px 46px 37px 23px;
+}
+#myImage{
+  display:none;
+}
+
+nav {
+display: flex;
+list-style-type: none;
+margin: 30px 10px 20px 30px;
+grid-area: nav;
+}
+#projects{
+  grid-area: projects;
+  margin: 60px 3px 40px 37px;
+}
+ 
+.message-area{
+  margin: 20px 7px;
+  background-color: #fefefe;
+  width: 300px;
+  height: 200px;
+  grid-area: message-area;
+
+}
+
 }
 /* iPads */
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1224px) {
   header {
     background-image: url("f.jpg");
     display: grid;
-    position: relative;
-    grid-template-rows: 30px 30px 30px;
+    position:relative;
+    grid-template-rows: 100px 30px 30px;
     grid-area: header;
     grid-template-areas: 
     '... nav'
@@ -260,7 +308,7 @@ footer {
   }
 
 #myName {
-margin: 95px -36px 37px 35px;
+margin: -50px 46px 37px 23px;
 font-size: 50px;
 font-family: Gabriola;
 color: #39185a;
@@ -268,11 +316,14 @@ display: flex;
 position: static;
 grid-area: myName;
 }
+#myImage{
+  display:none;
+}
 
 nav {
 display: flex;
 list-style-type: none;
-margin: 60px 10px 20px 30px;
+margin: 3px 10px 20px 30px;
 grid-area: nav;
 }
 
@@ -280,25 +331,28 @@ main{
   display: grid;
   grid-area: main;
   grid-gap:10px;
-
-  grid-template-columns:1fr 1fr 1fr ;
+  grid-template-columns:1fr ;
   grid-template-areas:
-  'about about about'
-  'skills skills skills'
-  'connect connect connect'
-  'experience experience experience'
-  'messageForm messageForm messageForm'
+  'about .'
+  'skills .'
+  'connect .'
+  'experience .'
+  'projects .'
+  'messageForm .'
   
   ;
 }
 
 #About{
  grid-area: about;
+ border: 3px inset #ebf2f3;
  margin: 60px 23px 40px 45px;
+ width: 90%;
 }
 #skills{
  grid-area: skills;
  margin:40px 23px 40px 45px;
+ width: 90%;
 }
 #Connect{
 grid-area: connect;
@@ -311,10 +365,15 @@ margin: 40px 23px 40px 44px;
 width: 90%;
 
 }
-
+#projects{
+  grid-area: projects;
+  margin: 60px 3px 40px 37px;
+}
+ 
 #container{
   display: grid;
   grid-template-columns: 6fr 1fr;
+  width: 90%;
 }
 
 #container p {
@@ -330,7 +389,36 @@ width: 90%;
   margin: 50px 39px;
   border-radius: 5px;
 }
+.message-area{
+  margin: 20px -123px;
+  background-color: #fefefe;
+  width: 300px;
+  height: 200px;
+  grid-area: message-area;
 
+}
+#messageForm{
+  display: grid;
+  grid-area: messageForm;
+  width:90%;
+  border: 3px inset #ebf2f3;
+  height: 80vh;
+  margin: 40px 33px;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: Gabriola;
+  color: #39185a;
+  font-size: 20px;
+  position:relative;
+  background-color: #ebf2f3;
+  grid-template-areas:
+  'h2m . . userMessages '
+  'form . .'
+}
+messages{
+  grid-area: userMessages;
+  margin-right: 30px;
+}
 
 }
 

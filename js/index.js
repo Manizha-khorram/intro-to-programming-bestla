@@ -68,21 +68,21 @@ messageForm.item(0).addEventListener("submit",(event) => {
       messageForm.item(0).reset();
 })
 
-var githubRequest = new XMLHttpRequest();
 
-githubRequest.open('GET', 'https://api.github.com/users/Manizha-khorram/repos');
-githubRequest.send();
-    githubRequest.onreadystatechange = function () {
-        if (githubRequest.readyState === 4) {
-            var repositories = JSON.parse(githubRequest.responseText);
-            console.log('i am repositories', repositories);
-        
-            let projectSection = document.getElementById('projects');
-            let projectList = projectSection.querySelector('ul');
-            for(let i = 0; i < repositories.length; i++){
-            let project = document.createElement('li');
-            project.innerText = repositories[i].name;
-            projectList.appendChild(project);
-   }        
-}}  
-      
+
+
+    
+fetch('https://api.github.com/users/Manizha-khorram/repos')
+ .then(response => response.json())
+ .then( data => {
+    
+     let projectSection = document.getElementById('projects');
+     let projectList = projectSection.querySelector('ul');
+     for(let i = 0; i < data.length; i++){
+         let project = document.createElement('li');
+         project.innerText = data[i].name;
+         projectList.appendChild(project);
+    
+             } }).catch(error => console.log('Looks like there is an error!!',error))
+ 
+ 
