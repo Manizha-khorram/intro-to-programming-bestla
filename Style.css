@@ -15,23 +15,26 @@ body {background-color: rgb(244, 229, 244);}
     "footer footer";
 
 }
+
  header {
       background-image: url("abst.jpg");
       background-repeat: no-repeat;
-      background-size:800px;
+      background-size:100%;
       display: grid;
       position: sticky;
       grid-area: header;
       grid-template-areas: 
-      '. nav'
+      '. menu nav'
       'myName myName'
       '. myImage'
       ;
       
     }
+  
 
+  
 #myName {
-  margin: 85px 400px 40px 361px;
+  margin: 130px 400px 40px 361px;
   font-size: 80px;
   font-family: Gabriola;
   color: #004857;
@@ -40,7 +43,7 @@ body {background-color: rgb(244, 229, 244);}
 }
 #myImage {
   width: 28%;
-  margin: 50px 10px 0px 878px;
+  margin: 80px 10px 0px 878px;
   display: inline-block;
   position: relative;
   grid-area: myImage;
@@ -251,51 +254,151 @@ footer {
 }
 footer p{
   text-align: center;
+  margin: -47px 10px 10px 30px;
 }
+#SocialMidia {
+  margin: 79px 10px 16px 940px;
+}
+#gmail{
+  width: 30px;
+  height:30px;
+}
+#github{
+  width: 30px;
+  height:30px;
+}
+#linkedin{
+  width: 30px;
+  height: 30px;
+}
+footer a{
+  color: #f4b5ce;
+  padding: 20px 5px;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: Gabriola;
+  font-size:large;
 
-/* I am still working in this */
+}
 
 /* Smartphones */
-@media only screen and (min-width : 520px) and (max-width : 768px) {
+@media only screen and (max-width : 768px) {
   
+ 
 header{
+  background: none;
+  background-color: #c8d7e3;
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  flex-direction: column-reverse;
+  
+
 }
-header #myName {
+#menu{
+  display: block;
+  grid-area: menu;
+  margin: 30px 10px 30px 1px ; 
+}
+.active{
+  display: block;
+}
+.menu-lines{  
+    display: block;
+    margin: 3px 20px 0px 20px ;
+    background-color:#152850;
+    width: 30px;
+    height: 3px;
+  }
+#navi-list{
+  width: 90%;
+}
+
+ #myName {
   font-size: 50px;
-  margin: 74px 46px 37px 23px;
+  margin: 14px  4px  -73px  135px;
+  width: 100%;
+  position: sticky;
+  
+  
 }
 #myImage{
   display:none;
 }
 
 nav {
-display: flex;
 list-style-type: none;
-margin: 30px 10px 20px 30px;
-grid-area: nav;
+margin: 30px 10px 20px 20px;
+display: none;
+
+
+}
+
+nav a{
+  display: block;
+  padding: 5px 0px;
+  color:#152850;
+  border-top: 3px solid #152850;
+  text-align: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+#About{
+  margin: 20px auto ;
+  width: 90%;
+}
+#Experience{
+  margin: 20px auto ;
+  width: 90%;
+}
+#skills{
+  margin: 20px auto ;
+  width: 90%;
 }
 #projects{
-  grid-area: projects;
-  margin: 60px 3px 40px 37px;
+  margin: 20px auto ;
+  width: 90%;
 }
- 
+#Connect{
+  margin: 20px auto ;
+  width: 90%;
+}
+#messageForm{
+  margin: 20px auto ;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  height:600px ;
+}
+
 .message-area{
-  margin: 20px 7px;
-  background-color: #fefefe;
-  width: 300px;
-  height: 200px;
-  grid-area: message-area;
+   
+  margin: 5px auto;
+  height: 100%;
+  width: 90%;
 
 }
+#messages{
 
+  margin: -90px 10px;
+}
+footer{
+  display: flex;
+}
+#SocialMidia {
+  margin: 79px 10px 16px 40px;
+}
+footer p{
+  margin:85px 10px 20px 68px ;
+}
 }
 /* iPads */
 @media only screen and (min-width : 768px) and (max-width : 1224px) {
   header {
-    background-image: url("f.jpg");
+    background-image: url("abst.jpg");
+    height: 350px;
     display: grid;
     position:relative;
     grid-template-rows: 100px 30px 30px;
@@ -308,8 +411,8 @@ grid-area: nav;
   }
 
 #myName {
-margin: -50px 46px 37px 23px;
-font-size: 50px;
+margin: 52px auto;
+font-size: 70px;
 font-family: Gabriola;
 color: #39185a;
 display: flex;
@@ -323,71 +426,36 @@ grid-area: myName;
 nav {
 display: flex;
 list-style-type: none;
-margin: 3px 10px 20px 30px;
+margin: 10px auto;
 grid-area: nav;
 }
-
 main{
-  display: grid;
-  grid-area: main;
-  grid-gap:10px;
-  grid-template-columns:1fr ;
-  grid-template-areas:
-  'about .'
-  'skills .'
-  'connect .'
-  'experience .'
-  'projects .'
-  'messageForm .'
-  
-  ;
+  display: flex;
+  flex-direction: column;
 }
-
 #About{
- grid-area: about;
- border: 3px inset #ebf2f3;
- margin: 60px 23px 40px 45px;
- width: 90%;
-}
-#skills{
- grid-area: skills;
- margin:40px 23px 40px 45px;
- width: 90%;
-}
-#Connect{
-grid-area: connect;
-margin: 40px 23px 40px 45px;
-}
-#Experience{
-grid-area: experience;
-border: 3px inset #ebf2f3;
-margin: 40px 23px 40px 44px;
-width: 90%;
-
-}
-#projects{
-  grid-area: projects;
-  margin: 60px 3px 40px 37px;
-}
- 
-#container{
-  display: grid;
-  grid-template-columns: 6fr 1fr;
+  margin: 20px auto ;
   width: 90%;
 }
-
-#container p {
-  font-family: Gabriola;
-  font-size: 20px;
-  height: 40px;
-  background-color: #f1f5fa;
+#Experience{
+  margin: 20px auto ;
+  width: 90%;
+}
+#skills{
+  margin: 20px auto ;
+  width: 90%;
+}
+#projects{
+  margin: 20px auto ;
+  width: 90%;
+}
+#Connect{
+  margin: 20px auto ;
+  width: 90%;
 }
 #messageForm{
-  width:85%;
- border: 3px inset #ebf2f3;
-  height: 80vh;
-  margin: 50px 39px;
-  border-radius: 5px;
+ margin: 20px auto;
+ width: 90%;
 }
 .message-area{
   margin: 20px -123px;
@@ -395,29 +463,24 @@ width: 90%;
   width: 300px;
   height: 200px;
   grid-area: message-area;
-
-}
-#messageForm{
-  display: grid;
-  grid-area: messageForm;
-  width:90%;
-  border: 3px inset #ebf2f3;
-  height: 80vh;
-  margin: 40px 33px;
-  border-radius: 5px;
-  padding: 20px;
-  font-family: Gabriola;
-  color: #39185a;
-  font-size: 20px;
-  position:relative;
-  background-color: #ebf2f3;
-  grid-template-areas:
-  'h2m . . userMessages '
-  'form . .'
 }
 messages{
   grid-area: userMessages;
   margin-right: 30px;
+}
+footer{
+  display: flex;
+}
+#SocialMidia {
+  display: flex;
+  margin: 79px 10px 16px 40px;
+  flex-direction: column;
+}
+footer a{
+  padding: 1px 5px;
+}
+footer p{
+  margin:120px 10px 20px 230px ;
 }
 
 }
